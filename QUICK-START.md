@@ -1,4 +1,4 @@
-# 🚀 StockAI Quick Start Guide
+# 🚀 EquiBull Quick Start Guide
 
 ## 🎯 What You Have
 
@@ -155,4 +155,4 @@ REACT_APP_API_URL=https://your-backend-url.com
 
 **You're all set! 🚀**
 
-Your StockAI website will be live and accessible to users worldwide. The project includes everything needed for a professional stock recommendation platform with AI capabilities.
+Your EquiBull website will be live and accessible to users worldwide. The project includes everything needed for a professional stock recommendation platform with AI capabilities.

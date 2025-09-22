@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide for StockAI
+# 🚀 Deployment Guide for EquiBull
 
 This guide will walk you through deploying your StockAI stock recommendation website to GitHub and Vercel.
 

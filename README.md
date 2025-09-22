@@ -1,4 +1,4 @@
-# StockAI - AI-Powered Stock Recommendation System
+# EquiBull - AI-Powered Stock Recommendation System
 
 A comprehensive stock recommendation website that combines proprietary algorithms, machine learning, and real-time market data to provide intelligent investment insights.
 
@@ -376,6 +376,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ by the StockAI Team**
+**Made with ❤️ by the EquiBull Team**
 
-*Empowering investors with AI-driven insights*
+*Empowering investors with algorithmic trading insights*

@@ -41,7 +41,7 @@ const HomePage = () => {
             AI-Powered Stock Recommendations
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Get intelligent stock insights powered by machine learning, technical analysis, and market sentiment
+            Empowering investors with algorithmic trading insights
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -163,7 +163,7 @@ const HomePage = () => {
             Ready to Make Smarter Investment Decisions?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of investors who trust StockAI for their daily stock analysis and recommendations
+            Join thousands of investors who trust EquiBull for their daily stock analysis and recommendations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
