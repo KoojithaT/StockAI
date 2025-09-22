@@ -57,7 +57,7 @@ const EmailSubscriptionForm = ({ onSuccess }) => {
     <div className="max-w-md mx-auto">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">
             Email Address
           </label>
           <div className="relative">
@@ -69,7 +69,7 @@ const EmailSubscriptionForm = ({ onSuccess }) => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="input-field pl-10"
+              className="input-field pl-10 h-11 placeholder-center dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
               placeholder="Enter your email address"
               required
               disabled={isSubmitting}
@@ -80,7 +80,7 @@ const EmailSubscriptionForm = ({ onSuccess }) => {
         <button
           type="submit"
           disabled={isSubmitting || !email.trim()}
-          className="btn-primary w-full flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-primary w-full h-11 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

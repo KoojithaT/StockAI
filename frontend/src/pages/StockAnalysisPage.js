@@ -104,20 +104,20 @@ const StockAnalysisPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10">
+      <div className="w-full px-4 sm:px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Stock Analysis & Recommendations
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Get AI-powered stock analysis, technical indicators, and personalized recommendations for any stock symbol
           </p>
         </div>
 
         {/* Search Form */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8">
           <form onSubmit={handleSearch} className="max-w-md mx-auto">
             <div className="flex space-x-2">
               <div className="flex-1">
@@ -126,14 +126,14 @@ const StockAnalysisPage = () => {
                   value={searchSymbol}
                   onChange={(e) => setSearchSymbol(e.target.value.toUpperCase())}
                   placeholder="Enter stock symbol (e.g., RELIANCE, TCS)"
-                  className="input-field w-full"
+                  className="input-field w-full h-11 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-100"
                   disabled={loading}
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading || !searchSymbol.trim()}
-                className="btn-primary px-6 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn-primary px-6 py-2 h-11 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <div className="spinner"></div>
@@ -149,59 +149,59 @@ const StockAnalysisPage = () => {
         {stockData && recommendation && (
           <div className="space-y-8">
             {/* Stock Overview */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
                 <BarChart3 className="w-6 h-6 mr-2 text-primary-600" />
                 Stock Overview - {stockData.symbol}
               </h2>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">₹{stockData.current_price.toLocaleString()}</div>
-                  <div className="text-sm text-gray-500">Current Price</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">₹{stockData.current_price.toLocaleString()}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Current Price</div>
                 </div>
                 
                 <div className="text-center">
                   <div className={`text-xl font-semibold ${stockData.change >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
                     {stockData.change >= 0 ? '+' : ''}₹{stockData.change.toFixed(2)}
                   </div>
-                  <div className="text-sm text-gray-500">Change</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Change</div>
                 </div>
                 
                 <div className="text-center">
                   <div className={`text-xl font-semibold ${stockData.change_percent >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
                     {stockData.change_percent >= 0 ? '+' : ''}{stockData.change_percent.toFixed(2)}%
                   </div>
-                  <div className="text-sm text-gray-500">Change %</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Change %</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-xl font-semibold text-gray-900">{stockData.volume.toLocaleString()}</div>
-                  <div className="text-sm text-gray-500">Volume</div>
+                  <div className="text-xl font-semibold text-gray-900 dark:text-gray-100">{stockData.volume.toLocaleString()}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Volume</div>
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-gray-200">
+              <div className="grid md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-gray-100">
                 <div className="text-center">
-                  <div className="text-lg font-semibold text-gray-900">₹{stockData.high.toLocaleString()}</div>
-                  <div className="text-sm text-gray-500">Day High</div>
+                  <div className="text-lg font-semibold text-gray-900 dark:text-gray-100">₹{stockData.high.toLocaleString()}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Day High</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-lg font-semibold text-gray-900">₹{stockData.low.toLocaleString()}</div>
-                  <div className="text-sm text-gray-500">Day Low</div>
+                  <div className="text-lg font-semibold text-gray-900 dark:text-gray-100">₹{stockData.low.toLocaleString()}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Day Low</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-lg font-semibold text-gray-900">₹{stockData.open.toLocaleString()}</div>
-                  <div className="text-sm text-gray-500">Open</div>
+                  <div className="text-lg font-semibold text-gray-900 dark:text-gray-100">₹{stockData.open.toLocaleString()}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">Open</div>
                 </div>
               </div>
             </div>
 
             {/* Recommendation */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center">
                 <Info className="w-6 h-6 mr-2 text-primary-600" />
                 AI Recommendation
               </h2>
@@ -209,7 +209,7 @@ const StockAnalysisPage = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getRecommendationColor(recommendation.recommendation)}`}>
+                    <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium ${getRecommendationColor(recommendation.recommendation)}`}>
                       {getRecommendationIcon(recommendation.recommendation)}
                       <span className="ml-2">{recommendation.recommendation}</span>
                     </span>
@@ -220,8 +220,8 @@ const StockAnalysisPage = () => {
                   
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Reasoning</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{recommendation.reasoning}</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Reasoning</h4>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed line-clamp-3">{recommendation.reasoning}</p>
                     </div>
                     
                     <div>
@@ -252,10 +252,10 @@ const StockAnalysisPage = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-6 pt-4 border-t border-gray-200">
+                  <div className="mt-6 pt-4 border-t border-gray-100">
                     <h4 className="font-semibold text-gray-900 mb-2">Market Sentiment</h4>
                     <div className="flex items-center space-x-2">
-                      <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium ${getRecommendationColor(recommendation.news_sentiment.label)}`}>
+                      <span className={`inline-flex items-center px-2.5 py-1.5 rounded text-xs font-medium ${getRecommendationColor(recommendation.news_sentiment.label)}`}>
                         {recommendation.news_sentiment.label}
                       </span>
                       <span className="text-sm text-gray-600">

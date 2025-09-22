@@ -62,11 +62,11 @@ const NewsCard = ({ article }) => {
   };
 
   return (
-    <div className="news-card group">
+    <div className="news-card group dark:bg-gray-800 dark:border-gray-700">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center space-x-2">
-          <span className="text-xs font-medium text-gray-500">{source}</span>
-          <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getSentimentColor(sentiment_label)}`}>
+          <span className="text-xs font-medium text-gray-500 dark:text-gray-400">{source}</span>
+          <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium ${getSentimentColor(sentiment_label)}`}>
             <span className="mr-1">{getSentimentIcon(sentiment_label)}</span>
             {sentiment_label}
           </span>
@@ -78,12 +78,12 @@ const NewsCard = ({ article }) => {
         )}
       </div>
 
-      <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200 line-clamp-2">
         {title}
       </h3>
 
       {description && (
-        <p className="text-gray-600 mb-4 leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-3">
           {truncateText(description)}
         </p>
       )}
@@ -105,10 +105,10 @@ const NewsCard = ({ article }) => {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-1 text-primary-600 hover:text-primary-700 transition-colors duration-200"
+            className="flex items-center space-x-1 link-primary link-arrow"
           >
             <span>Read More</span>
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="w-4 h-4 transition-transform" />
           </a>
         )}
       </div>

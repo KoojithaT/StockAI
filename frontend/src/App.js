@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App min-h-screen bg-gray-50">
+      <div className="App min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
         <Navbar />
         <main className="pt-16">
           <Routes>
