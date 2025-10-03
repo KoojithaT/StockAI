@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Mail, ArrowRight, ExternalLink, Calendar, Clock } from 'lucide-react';
+import { TrendingUp, Mail, ArrowRight} from 'lucide-react';
 import toast from 'react-hot-toast';
 import NewsCard from '../components/NewsCard';
 import EmailSubscriptionForm from '../components/EmailSubscriptionForm';
@@ -9,6 +9,7 @@ import { fetchNews } from '../services/api';
 const HomePage = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   useEffect(() => {
